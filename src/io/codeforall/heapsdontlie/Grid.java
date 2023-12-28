@@ -52,11 +52,12 @@ public class Grid {
                 bufferedWriter.write(str + "\n");
             }
 
+            bufferedWriter.close();
+
             System.out.println("Saved picture");
 
-            bufferedWriter.close();
         } catch (IOException e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
 
     }
@@ -73,17 +74,19 @@ public class Grid {
 
             while ((line = bufferedReader.readLine()) != null) {
 
-                Integer cellCol = Integer.valueOf(line.split(":")[0]);
-                Integer cellRow = Integer.valueOf(line.split(":")[1]);
+                int cellCol = Integer.valueOf(line.split(":")[0]);
+                int cellRow = Integer.valueOf(line.split(":")[1]);
 
                 cells[cellCol][cellRow].paint();
 
             }
 
-            System.out.println("Loaded picture");
             bufferedReader.close();
+
+            System.out.println("Loaded picture");
+
         } catch (IOException e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
 
     }
@@ -94,6 +97,8 @@ public class Grid {
                 cell.erase();
             }
         }
+
+        System.out.println("Cleared image");
     }
 
     public int getCellSize() {
