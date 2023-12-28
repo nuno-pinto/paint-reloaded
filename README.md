@@ -1,10 +1,10 @@
-### This Java application lets you paint, save and load a picture
+### This Java application lets you paint, save and load an image
 
 # Controls:
 
-* Arrows - Move cursos
+* Arrows - Move cursor
 * Space - Paint cell
 * D - Delete cell
-* C - Clear Picture
-* S - Save Picture
-* L - Load Picture
+* C - Clear image
+* S - Save image
+* L - Load image
